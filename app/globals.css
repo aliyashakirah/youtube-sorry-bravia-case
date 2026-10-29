@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-plus-jakarta: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+::selection {
+  background-color: #DCF3EA;
+  color: #065F43;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-plus-jakarta);
+  background-color: #FFFFFF;
+  color: #363C47;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-plus-jakarta);
+  font-size: 17px;
+  line-height: 1.72;
+  color: #363C47;
+  background-color: #FFFFFF;
+  min-height: 100vh;
+}
+
+/* Typography tokens following DESIGN.md */
+.headline-display {
+  font-family: var(--font-plus-jakarta);
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.headline-lg {
+  font-family: var(--font-plus-jakarta);
+  font-size: clamp(31px, 4.5vw, 47px);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.headline-md {
+  font-family: var(--font-plus-jakarta);
+  font-size: clamp(23px, 3.2vw, 29px);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.stat-number {
+  font-family: var(--font-plus-jakarta);
+  font-size: clamp(44px, 5.5vw, 56px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  font-feature-settings: 'tnum' 1;
+}
+
+.body-lg {
+  font-family: var(--font-plus-jakarta);
+  font-size: clamp(17.5px, 2vw, 20px);
+  font-weight: 400;
+  line-height: 1.72;
+  text-wrap: pretty;
+}
+
+.body-md {
+  font-family: var(--font-plus-jakarta);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.72;
+  text-wrap: pretty;
+}
+
+.body-sm {
+  font-family: var(--font-plus-jakarta);
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.label-lg {
+  font-family: var(--font-plus-jakarta);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.label-md {
+  font-family: var(--font-jetbrains-mono);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.label-sm {
+  font-family: var(--font-jetbrains-mono);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Scanlines overlay for Headline Card */
+.scanlines-texture {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.35)
+  );
+  background-size: 100% 4px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F8FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D6DBE3;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #087A58;
+}
